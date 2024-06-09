@@ -53,4 +53,4 @@ for i in range(len(optimal_nodes) - 1):
     )
 
 
-plt.show()
+plt.savefig("aco-tsp.png")
