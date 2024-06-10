@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # look here! https://towardsdatascience.com/q-learning-for-beginners-2837b777741
 # Initialize the FrozenLake environment
-env = gym.make('FrozenLake-v1', map_name="4x4", is_slippery=True, render_mode="human")
+env = gym.make('FrozenLake-v1', map_name="4x4", is_slippery=True, render_mode="ansi")
 
 # Q-learning parameters
 alpha = 0.6  # Learning rate
