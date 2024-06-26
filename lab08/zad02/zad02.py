@@ -43,3 +43,5 @@ plt.savefig("metal_fitness.png")
 
 # Parameters of the best solution : [0.93485545 0.7942803  0.98572804 0.99991462 0.1920289  0.        ]
 # Fitness value of the best solution = 2.833418487566338
+
+# dla podanych parametrów fitness nie zawsze dosięgał do 2.83

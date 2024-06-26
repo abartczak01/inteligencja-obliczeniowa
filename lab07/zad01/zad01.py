@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 # nltk.download('all')
-
+# artykułz nbc news
 with open("tekst.txt", 'r', encoding='utf-8') as plik:
     text = plik.read()
 
@@ -48,3 +48,9 @@ plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.title('Chmura tagów')
 plt.savefig('word_cloud.png')
+
+# Liczba słów po tokenizacji: 577
+# Liczba słów po usunięciu stop words: 347
+# Liczba słów po usunięciu 'new': 337
+# Liczba słów po lematyzacji: 337
+# [('kramer', 8), ('biden', 7), ('robocall', 6), ('voice', 5), ('nbc', 5), ('news', 5), ('first', 5), ('hampshire', 5), ('used', 5), ('call', 5)]

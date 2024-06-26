@@ -18,6 +18,7 @@ labirynt = np.array([
     [1,1,1,1,1,1,1,1,1,1,1,1]
 ])
 
+# przy tej impolementacji założono że przy natrafieniu na ścianę kończy się gra. im bliżej miejsca startu została zakonczona gra tym wieksza kara
 # Definicja funkcji fitness
 def fitness_func(model, solution, solution_idx):
     x, y = 1, 1  # Początkowe położenie w labiryncie
@@ -37,7 +38,7 @@ def fitness_func(model, solution, solution_idx):
         elif move == 3 and labirynt[x, y+1] != 1:  # w prawo
             y += 1
         else:
-            penalty = (abs(10 - x) + abs(10 - y)) * 0.25 # im blżej początku trasy błąd tym wieksza trasa
+            penalty = (abs(10 - x) + abs(10 - y)) * 0.25 # im blżej początku trasy jest popełniany błąd tym wieksza trasa
             break
 
     distance_to_exit = abs(10 - x) + abs(10 - y)

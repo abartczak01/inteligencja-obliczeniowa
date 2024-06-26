@@ -3,6 +3,7 @@ import numpy
 import matplotlib.pyplot as plt
 import time
 
+# items jako lista list [wartość, waga, nazwa]
 items = [
     [100, 7, "zegar"],
     [300, 7, "pejzaż"],
@@ -23,6 +24,7 @@ max_weight = 25  # Maksymalna waga plecaka
 def fitness_func(model, solution, solution_idx):
     total_value = numpy.sum(numpy.array(solution) * numpy.array([item[0] for item in items]))
     total_weight = numpy.sum(numpy.array(solution) * numpy.array([item[1] for item in items]))
+    # jeśli waga jest za duża zwracana jest mała wartość 
     if total_weight > max_weight:
         fitness = 0  # Rozwiązanie przekracza maksymalną wagę
     else:

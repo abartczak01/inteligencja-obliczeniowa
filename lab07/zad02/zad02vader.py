@@ -1,6 +1,4 @@
-import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-
 
 with open("bad.txt", 'r', encoding='utf-8') as file:
     bad_review = file.read()
@@ -32,3 +30,19 @@ print("\nZagregowany wynik wszystkich opinii:")
 print(f"Pozytywny (pos): {overall_sentiment['pos']}")
 print(f"Negatywny (neg): {overall_sentiment['neg']}")
 print(f"Zagregowany wynik (compound): {overall_sentiment['compound']}")
+# skala od -1 do 1, 
+
+# Negatywna opinia:
+# Pozytywny (pos): 0.0
+# Negatywny (neg): 0.245
+# Zagregowany wynik (compound): -0.9709
+
+# Pozytywna opinia:
+# Pozytywny (pos): 0.402
+# Negatywny (neg): 0.0
+# Zagregowany wynik (compound): 0.9747
+
+# Zagregowany wynik wszystkich opinii:
+# Pozytywny (pos): 0.201
+# Negatywny (neg): 0.1225
+# Zagregowany wynik (compound): 0.0019000000000000128
